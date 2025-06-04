@@ -1,0 +1,70 @@
+@use '../../../styles/mixins.scss' as *;
+
+.preview {
+
+  // .preview__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .preview__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: calc(100vh - 180px);
+    max-height: 520px;
+    max-width: 600px;
+  }
+
+  // .preview__text-block
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  // .preview__title
+  &__title {}
+
+  // .preview__description
+  &__description {
+    font-size: 24px;
+  }
+
+  // .preview__work-ours
+  &__work-ours {}
+
+  // .preview__social
+  &__social {
+    display: flex;
+    gap: 16px;
+  }
+
+  // .preview__vk
+  &__vk {}
+
+  // .preview__tg
+  &__tg {}
+
+  // .preview__features
+  &__features {
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  // .preview__feature-item
+  &__feature-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 16px;
+    border-bottom: 2px solid $main-color;
+  }
+}

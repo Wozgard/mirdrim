@@ -1,0 +1,18 @@
+<header class="header _flex">
+  <div class="header__container _container">
+    <nav class="header__nav">
+      <a
+        *ngFor="let item of navList"
+        [href]="item.link"
+        class="header__nav-item _animateUnderline"
+        >{{ item.name }}</a
+      >
+    </nav>
+    <div class="header__phone _animateUnderline" (click)="onPhoneClick(phone)">
+      {{ phone }}
+    </div>
+    <a class="header__logo" href="/">
+      <img src="assets/img/header-logo.svg" alt="" />
+    </a>
+  </div>
+</header>

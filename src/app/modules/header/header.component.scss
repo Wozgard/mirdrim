@@ -1,0 +1,28 @@
+.header {
+
+  // .header__container
+  &__container {
+    padding: 64px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .header__nav
+  &__nav {
+    display: flex;
+    gap: 36px;
+  }
+
+  // .header__nav-item
+  &__nav-item {}
+
+  // .header__phone
+  &__phone {
+    cursor: pointer;
+  }
+
+  // .header__logo
+  &__logo {}
+}

@@ -1,0 +1,12 @@
+{
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true,
+    "editor.tabSize": 2,
+    "angular-schematics.schematicsDefaultOptions": {
+        "angular-*": {
+            "externalTemplate": true,
+            "style": "scss"
+        }
+    }
+}

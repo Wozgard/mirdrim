@@ -1,0 +1,8 @@
+$text-color: #68503D;
+$main-color: #DDC8B5;
+
+@mixin hover {
+  @media (any-hover: hover) {
+    @content;
+  }
+}
