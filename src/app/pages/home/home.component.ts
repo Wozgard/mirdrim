@@ -3,6 +3,7 @@ import { HeaderComponent } from '../../modules/header&footer/header.component';
 import { PreviewComponent } from '../../modules/preview/preview.component';
 import { FooterComponent } from '../../modules/header&footer/footer.component';
 import { GamezoneComponent } from '../../modules/gamezone/gamezone.component';
+import { MenuComponent } from '../../modules/menu/menu.component';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +13,7 @@ import { GamezoneComponent } from '../../modules/gamezone/gamezone.component';
     PreviewComponent,
     FooterComponent,
     GamezoneComponent,
+    MenuComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
