@@ -1,0 +1,28 @@
+<section class="preview _flex _block">
+  <div class="preview__container _container">
+    <div class="preview__body">
+      <div class="preview__text-block">
+        <h1 class="preview__title">Уютное анти-кафе в Старом Осколе</h1>
+        <div class="preview__description">
+          Здесь мы создаём атмосферу уюта и дружбы, где каждый может найти себе
+          занятие по душе
+        </div>
+      </div>
+      <div class="preview__work-ours">09:00 - 21:00, ежедневно</div>
+      <div class="preview__social">
+        <a [href]="links.vk" class="preview__vk"
+          ><img src="assets/img/vk.svg" alt=""
+        /></a>
+        <a [href]="links.tg" class="preview__tg"
+          ><img src="assets/img/tg.svg" alt=""
+        /></a>
+      </div>
+    </div>
+    <ul class="preview__features">
+      <li *ngFor="let feature of featureList" class="preview__feature-item">
+        <h4>{{ feature.name }}</h4>
+        <img src="assets/img/check.svg" alt="" />
+      </li>
+    </ul>
+  </div>
+</section>

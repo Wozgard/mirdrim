@@ -1,0 +1,49 @@
+<section id="menu" class="menu _flex _block">
+  <div class="menu__container _container">
+    <h2 class="menu__title">Меню</h2>
+    <div class="menu__table">
+      <div *ngFor="let block of menu" class="menu__block">
+        <div *ngFor="let section of block" class="menu__section section-menu">
+          <div class="section-menu__title-block">
+            <h4 class="section-menu__title">{{ section.title }}</h4>
+            <div
+              *ngIf="section.volume"
+              class="section-menu__title-volume-block"
+            >
+              <h5
+                *ngFor="let volume of section.volume"
+                class="section-menu__title-volume"
+              >
+                {{ volume }}
+              </h5>
+            </div>
+          </div>
+          <div
+            *ngFor="let item of section.items"
+            class="section-menu__item item-menu"
+          >
+            <div class="item-menu__title">{{ item.name }}</div>
+            <div
+              class="item-menu__left-block"
+              [class.item-menu__left-block--addition]="item.addition"
+              [class.item-menu__left-block--center]="
+                (section?.volume?.length ?? 0) > 1
+              "
+            >
+              <div *ngFor="let price of item.prices" class="item-menu__price">
+                {{ item.addition ? '+' : '' }}
+                {{ price == -1 ? '  -  ' : price + 'р' }}
+              </div>
+              <div *ngIf="item.volume" class="item-menu__volume">
+                {{ item.volume }}
+              </div>
+              <div *ngIf="item.weight" class="item-menu__weight">
+                {{ item.weight }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,96 @@
+@use '../../../styles/mixins.scss' as *;
+
+.prices {
+
+  // .prices__block
+  &__block {
+    margin-bottom: 64px;
+  }
+
+  // .prices__title
+  &__title {}
+
+  // .prices__progress
+  &__progress {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border-bottom: 4px solid $text-color;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 1px;
+      height: 24px;
+      border-right: 4px solid $text-color;
+      border-radius: 10px;
+      transform: translate(0, 57%);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      width: 24px;
+      height: 24px;
+      background: url('../../../assets/img/triangle.svg') center / contain no-repeat;
+
+      transform: translate(50%, 57%);
+    }
+  }
+
+  // .prices__price
+  &__price {}
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+
+  padding-bottom: 64px;
+
+  &:not(:last-child) {
+    border-right: 1px solid transparent;
+    border-image: repeating-linear-gradient(to bottom,
+        $main-color 0,
+        $main-color 10px,
+        transparent 10px,
+        transparent 20px);
+    border-image-slice: 1;
+  }
+
+  &--void {
+    padding-top: 48px;
+  }
+
+  &--dotted {
+    position: relative;
+
+    &:not(:last-child) {
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 16px;
+        height: 16px;
+        background-color: $text-color;
+        border-radius: 50%;
+        transform: translate(54%, 60%);
+      }
+    }
+  }
+
+  // .price__description
+  &__description {}
+
+  // .price__title
+  &__title {}
+}

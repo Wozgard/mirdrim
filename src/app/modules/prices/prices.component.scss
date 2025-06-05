@@ -1,0 +1,12 @@
+.prices {
+
+  // .prices__container
+  &__container {}
+
+  // .prices__description
+  &__description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

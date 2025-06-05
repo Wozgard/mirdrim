@@ -5,9 +5,12 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  template: `
+    <ng-container>
+      <router-outlet></router-outlet>
+      <div id="copy" class="copy-message">Скопировано!</div>
+    </ng-container>
+  `,
+  styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  title = 'mirdrim';
-}
+export class AppComponent {}

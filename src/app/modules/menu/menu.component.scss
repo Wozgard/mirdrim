@@ -1,0 +1,116 @@
+@use '../../../styles/mixins.scss' as *;
+
+.menu {
+
+  // .menu__container
+  &__container {}
+
+  // .menu__title
+  &__title {}
+
+  // .menu__table
+  &__table {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    justify-content: space-between;
+  }
+
+  // .menu__block
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+
+    &:nth-child(1) {
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+
+    &:nth-child(2) {
+      grid-column-start: 6;
+      grid-column-end: 10;
+    }
+
+    &:nth-child(3) {
+      grid-column-start: 11;
+      grid-column-end: 15;
+    }
+  }
+
+  // .menu__section
+  &__section {}
+}
+
+.section-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  // .section-menu__title-block
+  &__title-block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .section-menu__title
+  &__title {}
+
+  // .section-menu__title-volume
+  &__title-volume {}
+
+  // .section-menu__title-volume-block
+  &__title-volume-block {
+    display: flex;
+    gap: 24px;
+  }
+
+  // .section-menu__item
+  &__item {}
+}
+
+.item-menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid transparent;
+  border-image: repeating-linear-gradient(to right,
+      $main-color 0,
+      $main-color 10px,
+      transparent 10px,
+      transparent 20px);
+  border-image-slice: 1;
+
+  // .item-menu__title
+  &__title {}
+
+  // .item-menu__left-block
+  &__left-block {
+    display: flex;
+    gap: 24px;
+
+    &--addition {
+      flex-direction: row-reverse;
+    }
+
+    &--center {
+      align-items: center;
+      justify-content: center;
+      min-width: 130px;
+    }
+  }
+
+  // .item-menu__price
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+  }
+
+  // .item-menu__volume
+  &__volume {}
+
+  // .item-menu__weight
+  &__weight {}
+}

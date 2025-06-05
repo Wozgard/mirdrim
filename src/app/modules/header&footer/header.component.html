@@ -1,0 +1,26 @@
+<header class="header _flex">
+  <div class="header__container _container">
+    <div *ngIf="socialLinksVisible" class="header__social">
+      <a [href]="socialLinks.vk" class="header__vk"
+        ><img src="assets/img/vk.svg" alt=""
+      /></a>
+      <a [href]="socialLinks.tg" class="header__tg"
+        ><img src="assets/img/tg.svg" alt=""
+      /></a>
+    </div>
+    <nav class="header__nav">
+      <a
+        *ngFor="let item of navList"
+        [href]="item.link"
+        class="header__nav-item _animateUnderline"
+        >{{ item.name }}</a
+      >
+    </nav>
+    <div class="header__phone _animateUnderline" (click)="onPhoneClick(phone)">
+      {{ phone }}
+    </div>
+    <a class="header__logo" href="/">
+      <img src="assets/img/header-logo.svg" alt="" />
+    </a>
+  </div>
+</header>

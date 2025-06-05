@@ -1,0 +1,42 @@
+<svg width="60" height="68" viewBox="0 0 60 68" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path
+      id="pin-shape"
+      d="M23.51 51.523a.5.5 0 0 1-.5.477c-.29 0-.51-.21-.52-.477-.145-3.168-1.756-5.217-4.832-6.147C7.53 42.968 0 33.863 0 23 0 10.297 10.297 0 23 0s23 10.297 23 23c0 10.863-7.53 19.968-17.658 22.376-3.076.93-4.687 2.98-4.83 6.147z"
+      fill="#f43"
+    />
+    <filter id="pin-blur" x="-21.7%" y="-15.4%" width="143.5%" height="138.5%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+      <feOffset dy="2" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope=".3" />
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <!-- Контур пина с тенью -->
+  <g fill="none" fill-rule="evenodd">
+    <g transform="translate(7 5)" fill="currentColor" fill-rule="nonzero">
+      <use filter="url(#pin-blur)" href="#pin-shape" />
+      <use href="#pin-shape" />
+    </g>
+
+    <!-- Белый круг -->
+    <path d="M30 68c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z" fill="#fff" fill-rule="nonzero" />
+    
+    <!-- Цветной центр -->
+    <path d="M30 66a2 2 0 1 0 .001-3.999A2 2 0 0 0 30 66z" fill="#f43" />
+    
+    <!-- Вторая иконка, наложенная на пин -->
+    <g transform="translate(19, 16)" fill="#fff">
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M23 8v-.5A3.5 3.5 0 0 0 19.5 4h-1.283c-.048 0-.096 0-.144.003A1.015 1.015 0 0 0 18 4H4a1 1 0 0 0-1 1c0 6 .03 12 8 12 2.972 0 4.84-.834 6.014-2.191.199-.23.56-.67.878-1.06.4-.491.913-.879 1.464-1.195C20.66 11.806 23 10.163 23 8zm-4.002-2h.502A1.5 1.5 0 0 1 21 7.5V8a2 2 0 0 1-2 2h-.191c.152-1.267.183-2.625.19-4z"
+      />
+      <path
+        d="M2.906 18c-.5 0-.906.406-.906.906 0 .36.213.685.553.803C3.735 20.122 6.75 21 11 21c4.25 0 7.265-.878 8.447-1.29a.838.838 0 0 0 .553-.804c0-.5-.406-.906-.906-.906H2.906z"
+      />
+    </g>
+  </g>
+</svg>

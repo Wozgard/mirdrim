@@ -1,0 +1,15 @@
+<section id="gamezone" class="gamezone _flex _block">
+  <div class="gamezone__container _container">
+    <h2 class="gamezone__title">Игровая зона</h2>
+    <div class="gamezone__cards">
+      <div *ngFor="let card of cardList" class="gamezone__card card-gamezone">
+        <div
+          [ngStyle]="{ 'background-image': 'url(' + card.img + ')' }"
+          class="card-gamezone__img"
+        ></div>
+        <h4 class="card-gamezone__title">{{ card.title }}</h4>
+        <div class="card-gamezone__description">{{ card.description }}</div>
+      </div>
+    </div>
+  </div>
+</section>

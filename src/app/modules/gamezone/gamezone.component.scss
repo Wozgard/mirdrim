@@ -1,0 +1,39 @@
+.gamezone {
+
+  // .gamezone__container
+  &__container {}
+
+  // .gamezone__title
+  &__title {}
+
+  // .gamezone__cards
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .gamezone__card
+  &__card {}
+}
+
+.card-gamezone {
+  max-width: 360px;
+
+  // .card-gamezone__img
+  &__img {
+    height: 316px;
+    background-size: cover;
+    border-top-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    margin-bottom: 16px;
+  }
+
+  // .card-gamezone__title
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  // .card-gamezone__description
+  &__description {}
+}

@@ -1,0 +1,23 @@
+.location {
+
+  // .location__container
+  &__container {}
+
+  // .location__title-block
+  &__title-block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .location__title
+  &__title {}
+
+  // .location__address
+  &__address {}
+
+  // .location__map
+  &__map {
+    width: 100%;
+    height: 550px;
+  }
+}
