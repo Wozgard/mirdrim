@@ -1,1 +1,14 @@
-<p>prices works!</p>
+<section id="prices" class="prices _flex _block">
+  <div class="prices__container _container">
+    <app-prices-block
+      *ngFor="let item of priceLists"
+      [title]="item.title"
+      [dotted]="item.dotted"
+      [priceList]="item.priceList"
+    ></app-prices-block>
+    <div class="prices__description">
+      Если вы приходите компанией, время оплачивается отдельно для каждого
+      человека
+    </div>
+  </div>
+</section>

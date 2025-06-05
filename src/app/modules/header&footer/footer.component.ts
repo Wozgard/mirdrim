@@ -25,7 +25,7 @@ export class FooterComponent {
     },
     {
       name: 'Цены',
-      link: '/#prises',
+      link: '/#prices',
     },
     {
       name: 'Меню',

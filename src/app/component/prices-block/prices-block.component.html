@@ -1,0 +1,16 @@
+<article class="prices__block">
+  <h2 class="prices__title">{{ title }}</h2>
+  <div class="prices__progress">
+    <div
+      *ngFor="let price of priceList"
+      class="prices__price price"
+      [class.price--void]="!price.description"
+      [class.price--dotted]="dotted"
+    >
+      <div *ngIf="price.description" class="price__description">
+        {{ price.description }}
+      </div>
+      <h3 class="price__title">{{ price.title }}</h3>
+    </div>
+  </div>
+</article>

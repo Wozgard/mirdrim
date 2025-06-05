@@ -5,6 +5,7 @@ import { FooterComponent } from '../../modules/header&footer/footer.component';
 import { GamezoneComponent } from '../../modules/gamezone/gamezone.component';
 import { MenuComponent } from '../../modules/menu/menu.component';
 import { LocationComponent } from '../../modules/location/location.component';
+import { PricesComponent } from '../../modules/prices/prices.component';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +17,7 @@ import { LocationComponent } from '../../modules/location/location.component';
     GamezoneComponent,
     MenuComponent,
     LocationComponent,
+    PricesComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

@@ -25,7 +25,7 @@ export class HeaderComponent {
     },
     {
       name: 'Цены',
-      link: '/#prises',
+      link: '/#prices',
     },
     {
       name: 'Меню',
