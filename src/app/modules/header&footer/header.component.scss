@@ -9,6 +9,12 @@
     align-items: center;
   }
 
+  // .header__social
+  &__social {
+    display: flex;
+    gap: 16px;
+  }
+
   // .header__nav
   &__nav {
     display: flex;

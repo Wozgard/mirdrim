@@ -12,6 +12,12 @@ import { CopyServiceService } from '../../services/copy.service';
 export class HeaderComponent {
   public phone = '+7 (910) 226-03-19';
 
+  public socialLinksVisible = false;
+  public socialLinks = {
+    vk: 'https://vk.com/mirdrim',
+    tg: 'https://t.me/World_and_DreaM',
+  };
+
   public navList = [
     {
       name: 'Игровая зона',
