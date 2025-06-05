@@ -1,10 +1,10 @@
 <header class="header _flex">
   <div class="header__container _container">
     <div *ngIf="socialLinksVisible" class="header__social">
-      <a [href]="socialLinks.vk" class="header__vk"
+      <a [href]="socialLinks.vk" class="header__vk" target="_blank"
         ><img src="assets/img/vk.svg" alt=""
       /></a>
-      <a [href]="socialLinks.tg" class="header__tg"
+      <a [href]="socialLinks.tg" class="header__tg" target="_blank"
         ><img src="assets/img/tg.svg" alt=""
       /></a>
     </div>
@@ -12,7 +12,6 @@
       <a
         *ngFor="let item of navList"
         [href]="item.link"
-        target="_blank"
         class="header__nav-item _animateUnderline"
         >{{ item.name }}</a
       >
