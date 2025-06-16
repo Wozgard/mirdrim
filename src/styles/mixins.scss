@@ -6,3 +6,10 @@ $main-color: #DDC8B5;
     @content;
   }
 }
+
+
+@mixin media-tablet {
+  @media (max-width: 1230px) {
+    @content;
+  }
+}
