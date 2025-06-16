@@ -3,6 +3,7 @@
 .menu {
   @include media-tablet {
     justify-content: unset;
+    padding-bottom: 24px;
   }
 
   // .menu__container
@@ -11,7 +12,7 @@
     @include media-tablet {
       overflow-x: scroll;
       width: 100%;
-      padding: 0 5%;
+      padding: 0 5% 24px;
     }
   }
 

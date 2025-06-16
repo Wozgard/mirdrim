@@ -13,3 +13,15 @@ $main-color: #DDC8B5;
     @content;
   }
 }
+
+@mixin media-mobile {
+  @media (max-width: 630px) {
+    @content;
+  }
+}
+
+@mixin media-small {
+  @media (max-width: 547px) {
+    @content;
+  }
+}

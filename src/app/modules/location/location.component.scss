@@ -1,3 +1,5 @@
+@use '../../../styles/mixins.scss' as *;
+
 .location {
 
   // .location__container
@@ -7,10 +9,19 @@
   &__title-block {
     display: flex;
     justify-content: space-between;
+    gap: 16px;
+
+    margin-bottom: 36px;
+
+    @include media-tablet {
+      flex-direction: column;
+    }
   }
 
   // .location__title
-  &__title {}
+  &__title {
+    margin: unset;
+  }
 
   // .location__address
   &__address {}
