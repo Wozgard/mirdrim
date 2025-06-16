@@ -1,6 +1,8 @@
 <section id="menu" class="menu _flex _block">
   <div class="menu__container _container">
     <h2 class="menu__title">Меню</h2>
+  </div>
+  <div class="menu__container _container">
     <div class="menu__table">
       <div *ngFor="let block of menu" class="menu__block">
         <div *ngFor="let section of block" class="menu__section section-menu">
@@ -26,6 +28,7 @@
             <div
               class="item-menu__left-block"
               [class.item-menu__left-block--addition]="item.addition"
+              [class.item-menu__left-block--switch]="item.switch"
               [class.item-menu__left-block--center]="
                 (section?.volume?.length ?? 0) > 1
               "

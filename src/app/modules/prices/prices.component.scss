@@ -1,7 +1,14 @@
+@use '../../../styles/mixins.scss' as *;
+
 .prices {
 
   // .prices__container
-  &__container {}
+  &__container {
+    @include media-tablet {
+      display: flex;
+      gap: 32px;
+    }
+  }
 
   // .prices__description
   &__description {

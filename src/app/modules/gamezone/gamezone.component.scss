@@ -1,7 +1,19 @@
+@use '../../../styles/mixins.scss' as *;
+
 .gamezone {
+  @include media-tablet {
+    justify-content: unset;
+    padding-bottom: 24px;
+  }
 
   // .gamezone__container
-  &__container {}
+  &__container {
+    @include media-tablet {
+      overflow-x: scroll;
+      width: 100%;
+      padding: 0 5% 24px;
+    }
+  }
 
   // .gamezone__title
   &__title {}
@@ -11,6 +23,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 16px;
+
+    &::after {
+      content: '';
+      flex: 0 0 auto;
+      display: block;
+      width: 16px;
+      height: 1px;
+    }
   }
 
   // .gamezone__card
@@ -19,6 +40,11 @@
 
 .card-gamezone {
   max-width: 360px;
+
+  @include media-tablet {
+    width: 360px;
+    flex: 0 0 auto;
+  }
 
   // .card-gamezone__img
   &__img {

@@ -8,17 +8,23 @@
           занятие по душе
         </div>
       </div>
+      <ul *ngIf="isTablet" class="preview__features">
+        <li *ngFor="let feature of featureList" class="preview__feature-item">
+          <h4>{{ feature.name }}</h4>
+          <img src="assets/img/check.svg" alt="" />
+        </li>
+      </ul>
       <div class="preview__work-ours">09:00 - 21:00, ежедневно</div>
       <div class="preview__social">
-        <a [href]="links.vk" class="preview__vk"
-          ><img src="assets/img/vk.svg" alt=""
-        /></a>
-        <a [href]="links.tg" class="preview__tg"
-          ><img src="assets/img/tg.svg" alt=""
-        /></a>
+        <a [href]="links.vk" class="preview__vk" target="_blank">
+          <img src="assets/img/vk.svg" alt="" />
+        </a>
+        <a [href]="links.tg" class="preview__tg" target="_blank">
+          <img src="assets/img/tg.svg" alt="" />
+        </a>
       </div>
     </div>
-    <ul class="preview__features">
+    <ul *ngIf="!isTablet" class="preview__features">
       <li *ngFor="let feature of featureList" class="preview__feature-item">
         <h4>{{ feature.name }}</h4>
         <img src="assets/img/check.svg" alt="" />
