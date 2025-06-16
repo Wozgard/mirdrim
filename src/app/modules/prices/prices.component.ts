@@ -27,20 +27,20 @@ export class PricesComponent {
       dotted: true,
       priceList: [
         {
-          title: '250р',
-          description: '1й час',
+          title: '',
+          description: '',
+        },
+        {
+          title: '',
+          description: '',
         },
         {
           title: '2 руб/мин',
-          description: '2й час',
+          description: '1й-4й час',
         },
         {
-          title: '2 руб/мин',
-          description: '3й час',
-        },
-        {
-          title: '1 руб/мин',
-          description: '4й час',
+          title: '',
+          description: '',
         },
         {
           title: 'Бесплатно',
