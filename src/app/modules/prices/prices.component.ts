@@ -28,11 +28,9 @@ export class PricesComponent {
       priceList: [
         {
           title: '',
-          description: '',
         },
         {
           title: '',
-          description: '',
         },
         {
           title: '2 руб/мин',
@@ -40,7 +38,6 @@ export class PricesComponent {
         },
         {
           title: '',
-          description: '',
         },
         {
           title: 'Бесплатно',

@@ -1,9 +1,20 @@
 @use '../../../styles/mixins.scss' as *;
 
 .menu {
+  @include media-tablet {
+    justify-content: unset;
+    padding-bottom: 24px;
+  }
 
   // .menu__container
-  &__container {}
+  &__container {
+
+    @include media-tablet {
+      overflow-x: scroll;
+      width: 100%;
+      padding: 0 5% 24px;
+    }
+  }
 
   // .menu__title
   &__title {}
@@ -13,6 +24,20 @@
     display: grid;
     grid-template-columns: repeat(14, 1fr);
     justify-content: space-between;
+
+    @include media-tablet {
+      grid-template-columns: repeat(15, 85px);
+    }
+
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      grid-column: span 1;
+    }
   }
 
   // .menu__block

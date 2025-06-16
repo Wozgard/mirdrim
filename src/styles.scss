@@ -15,22 +15,39 @@ h6 {
 h1 {
   font-size: 72px;
   line-height: 75px;
+
+  @include media-mobile {
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
 
 h2 {
   font-size: 42px;
   line-height: 1;
   margin-bottom: 36px;
+
+  @include media-mobile {
+    font-size: 32px;
+  }
 }
 
 h3 {
   font-size: 32px;
   line-height: 1;
+
+  @include media-mobile {
+    font-size: 24px;
+  }
 }
 
 h4 {
   font-size: 26px;
   line-height: 1;
+
+  @include media-mobile {
+    font-size: 22px;
+  }
 }
 
 h5 {
@@ -53,10 +70,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 ._block {
   padding: 64px 0;
+
+  @include media-tablet {
+    padding: 48px 0;
+  }
 }
 
 ._animateUnderline {

@@ -1,26 +1,60 @@
-<header class="header _flex">
+<header class="header _flex _block">
   <div class="header__container _container">
-    <div *ngIf="socialLinksVisible" class="header__social">
-      <a [href]="socialLinks.vk" class="header__vk" target="_blank"
-        ><img src="assets/img/vk.svg" alt=""
-      /></a>
-      <a [href]="socialLinks.tg" class="header__tg" target="_blank"
-        ><img src="assets/img/tg.svg" alt=""
-      /></a>
-    </div>
-    <nav class="header__nav">
-      <a
-        *ngFor="let item of navList"
-        [href]="item.link"
-        class="header__nav-item _animateUnderline"
-        >{{ item.name }}</a
+    <!-- *ngIf="!enableBurger && !isTablet" -->
+    <div
+      class="header__container"
+      [class.header__container--footer]="!enableBurger"
+      [class.header__container--burger]="enableBurger"
+      [class.header__container--open]="burgerOpened"
+    >
+      <div *ngIf="socialLinksVisible" class="header__social">
+        <a [href]="socialLinks.vk" class="header__vk" target="_blank"
+          ><img src="assets/img/vk.svg" alt=""
+        /></a>
+        <a [href]="socialLinks.tg" class="header__tg" target="_blank"
+          ><img src="assets/img/tg.svg" alt=""
+        /></a>
+      </div>
+      <nav
+        class="header__nav"
+        [class.header__nav--vertical]="isTablet && enableBurger"
+        [class.header__nav--footer]="!enableBurger"
       >
-    </nav>
-    <div class="header__phone _animateUnderline" (click)="onPhoneClick(phone)">
-      {{ phone }}
+        <a
+          *ngFor="let item of navList"
+          [href]="item.link"
+          (click)="toggleBurger()"
+          class="header__nav-item _animateUnderline"
+          >{{ item.name }}</a
+        >
+      </nav>
+      <div
+        class="header__phone _animateUnderline"
+        (click)="onPhoneClick(phone)"
+      >
+        {{ phone }}
+      </div>
+      <a *ngIf="!enableBurger && isTablet" class="header__logo" href="/">
+        <img
+          [src]="
+            isMobile ? 'assets/img/logo.svg' : 'assets/img/header-logo.svg'
+          "
+          alt=""
+        />
+      </a>
     </div>
-    <a class="header__logo" href="/">
+    <a *ngIf="enableBurger || !isTablet" class="header__logo" href="/">
       <img src="assets/img/header-logo.svg" alt="" />
     </a>
+    <div
+      *ngIf="isTablet && enableBurger"
+      class="header__burger"
+      [class.header__burger--active]="burgerOpened"
+      (click)="toggleBurger()"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
 </header>

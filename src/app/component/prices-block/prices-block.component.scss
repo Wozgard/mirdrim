@@ -1,5 +1,9 @@
 @use '../../../styles/mixins.scss' as *;
 
+:host {
+  flex: 0 0 45%;
+}
+
 .prices {
 
   // .prices__block
@@ -41,6 +45,28 @@
 
       transform: translate(50%, 57%);
     }
+
+    @include media-tablet {
+      grid-template-rows: repeat(5, 130px);
+      grid-template-columns: 1fr;
+      border-bottom: unset;
+
+      border-left: 4px solid $text-color;
+
+      &::before {
+        top: 0;
+        bottom: unset;
+        transform: translate(-83%, -50%) rotate(90deg);
+
+      }
+
+      &::after {
+        left: 0;
+        right: unset;
+        transform: translate(-57%, 50%) rotate(90deg);
+
+      }
+    }
   }
 
   // .prices__price
@@ -66,10 +92,6 @@
     border-image-slice: 1;
   }
 
-  &--void {
-    padding-top: 48px;
-  }
-
   &--dotted {
     position: relative;
 
@@ -84,8 +106,36 @@
         background-color: $text-color;
         border-radius: 50%;
         transform: translate(54%, 60%);
+
+        @include media-tablet {
+          right: unset;
+          left: 0;
+          transform: translate(-64%, 50%);
+        }
       }
     }
+  }
+
+  @include media-tablet {
+    align-items: flex-start;
+    padding: 16px;
+    padding-bottom: 32px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid transparent;
+      border-right: unset;
+      border-image: repeating-linear-gradient(to right,
+          $main-color 0,
+          $main-color 10px,
+          transparent 10px,
+          transparent 20px);
+      border-image-slice: 1;
+    }
+
+    &--void {
+      padding-top: 48px;
+    }
+
   }
 
   // .price__description

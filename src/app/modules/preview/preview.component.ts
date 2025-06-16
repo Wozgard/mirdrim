@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { DeviceDetectorService } from '../../services/device-detector.service';
 
 @Component({
   selector: 'app-preview',
@@ -21,4 +22,8 @@ export class PreviewComponent {
     { name: 'Виртуальная реальность', exist: true },
     { name: 'Мастер-классы', exist: true },
   ];
+
+  public isTablet = this.deviceService.isTablet();
+
+  constructor(private readonly deviceService: DeviceDetectorService) {}
 }
